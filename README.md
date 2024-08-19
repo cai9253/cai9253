@@ -50,4 +50,4 @@ ul{
     text-align: center;
     font-size: 12px;
     margin: auto;
-}[Jay-Mark-Q.-Amper-d22d34e380bf6102bbe65661936b4c7217cc38dc.zip](https://github.com/user-attachments/files/16659594/Jay-Mark-Q.-Amper-d22d34e380bf6102bbe65661936b4c7217cc38dc.zip)
+}
