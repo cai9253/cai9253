@@ -48,147 +48,73 @@ function test_input($data) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 5 Form Example</title>
     <style>
-      
-            /* Reset some default styles */
+        body, html {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
-      body, h1, h2, p, ul, li {
-    margin: 0;
-   padding: 0;
-}
+        /* Centered form container */
+        .center-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 500px;
+            width: 350px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
 
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
+        form {
+            width: 100%;
+            margin-bottom: 20px;
+        }
 
-header {
-    background: #3a1297;
-    color: #fff;
-    padding: 10px 0;
-}
+        input, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
 
-header .container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        button {
+            background-color: #3a1297;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-header h1 {
-    margin: 0;
-}
+        button:hover {
+            background-color: #004a6f;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    padding: 20px 0;
-}
-
-main .container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-form {
-    display: grid;
-    gap: 10px;
-}
-
-form label {
-    display: block;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #3a1297;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-footer {
-    background: #3a1297;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer .container {
-    width: 80%;
-    margin: 0 auto;
-}
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-h2{
-    text-align: center;
-}
-hr{
-    width: 100px;
-    margin: 10px auto;
-}
-.members{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.team-mem{
-    margin: 8px;
-}
-img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 40px;
-}
-h4,p{
-    text-align: center;
-    font-size: 12px;
-    margin: auto;
-}
-ul{
-    text-align: center;
-    font-size: 12px;
-    margin: auto;
-}
+        .success {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
