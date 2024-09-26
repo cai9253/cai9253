@@ -51,69 +51,81 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Group 5</title>
     <style>
         body {
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        
-        /* The center-box contain form, input, button */
-        .center-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 650px;
-            width: 350px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-        form {
-            width: 100%;
-            margin-bottom: 20px;
-        }
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
 
-        input, button {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 12px;
-            font-size: 1rem;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
+h1, h2 {
+    text-align: center;
+    color: #000000;
+}
 
-        button {
-            background-color: #3a1297;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
 
-        button:hover {
-            background-color: #004a6f;
-        }
+label {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #555;
+}
 
-        .error {
-            color: red;
-        }
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
 
-        .success-message {
-            color: green;
-            font-size: 1rem;
-            margin-top: 1px;
-            text-align: center;
-        }
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    </style>
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.response {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+    </style>     
 </head>
 <body>
 <div class="center-box">
