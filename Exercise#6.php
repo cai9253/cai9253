@@ -1,160 +1,202 @@
+index.php
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-	<title>Group 5 Webpage</title>
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Startup Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!-- //Meta tag Keywords -->
+    <!-- Add HTTPS header for security -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <style>
+        body {
+            background-image: url('img/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-	<!-- Style-CSS -->
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	<!-- Font-Awesome-Icons-CSS -->
-	<!-- //Custom-Files -->
+        .container {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
 
-	<!-- Web-Fonts -->
-	<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
-	 rel="stylesheet">
-	<!-- //Web-Fonts -->
+        h2 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #response {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #e9ecef;
+            display: none;
+        }
+
+        .loading {
+            display: none;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- main banner -->
-	<div class="main-top" id="home">
-		<!-- header -->
-		<header>
-			<div class="container-fluid">
-				<div class="header d-lg-flex justify-content-between align-items-center py-3 px-sm-3">
-					<!-- logo -->
-					<div id="logo">
-						<h1><a href="index.php"><span class="fa fa-linode mr-2"></span>Group 5</a></h1>
-					</div>
-					<!-- //logo -->
-					<!-- nav -->
-					<div class="nav_w3ls">
-						<nav>
-							<label for="drop" class="toggle">Menu</label>
-							<input type="checkbox" id="drop" />
-							<ul class="menu">
-								<li><a href="index.php" class="active">Home</a></li>
-								<li><a href="about.php">About Us</a></li>
-								<li><a href="pricing.php">Pricing</a></li>
-								<li>
-									<!-- First Tier Drop Down -->
-									<label for="drop-2" class="toggle toogle-2">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
-									</label>
-									<a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-									<input type="checkbox" id="drop-2" />
-									<ul>
-										<li><a href="#services" class="drop-text">Services</a></li>
-										<li><a href="faq.php" class="drop-text">FAQ's</a></li>
-										<li><a href="#stats" class="drop-text">Statistics</a></li>
-										<li><a href="404.php" class="drop-text">Why Choose Us?</a></li>
-										<li><a href="about.php" class="drop-text">Our Team</a></li>
-										<li><a href="#partners" class="drop-text">Partners</a></li>
-									</ul>
-								</li>
-								<li><a href="contact.php">Contact Us</a></li>
-							</ul>
-						</nav>
-					</div>
-					<!-- //nav -->
-					<div class="d-flex mt-lg-1 mt-sm-2 mt-3 justify-content-center">
-						<!-- search -->
-						<div class="search-w3layouts mr-3">
-							<form action="#" method="post" class="search-bottom-wthree d-flex">
-								<input class="search" type="search" placeholder="Search Here..." required="">
-								<button class="form-control btn" type="submit"><span class="fa fa-search"></span></button>
-							</form>
-						</div>
-						<!-- //search -->
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- //header -->
-<!-- footer -->
-	<footer class="bg-li py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<!-- subscribe -->
-			<div class="subscribe mx-auto">
-				<div class="icon-effect-w3">
-					<span class="fa fa-envelope"></span>
-				</div>
-				<h2 class="tittle text-center font-weight-bold">Stay Updated!</h2>
-				<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-				<form action="#" method="post" class="subscribe-wthree pt-2">
-					<div class="d-flex subscribe-wthree-field">
-						<input class="form-control" type="email" placeholder="Enter your email..." name="email" required="">
-						<button class="btn form-control w-50" type="submit">Subscribe</button>
-					</div>
-				</form>
-			</div>
-			<!-- //subscribe -->
-		</div>
-	</footer>
-	<!-- //footer -->
-	<!-- copyright bottom -->
-	<div class="copy-bottom bg-li py-4 border-top">
-		<div class="container-fluid">
-			<div class="d-md-flex px-md-3 position-relative text-center">
-				<!-- footer social icons -->
-				<div class="social-icons-footer mb-md-0 mb-3">
-					<ul class="list-unstyled">
-						<li>
-							<a href="#">
-								<span class="fa fa-facebook"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-twitter"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-google-plus"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-instagram"></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<!-- //footer social icons -->
-				<!-- copyright -->
-				<div class="copy_right mx-md-auto mb-md-0 mb-3">
-					<p class="text-bl let">© 2024 Startup. All rights reserved.</p>
-				</div>
-				<!-- //copyright -->
-				<!-- move top icon -->
-				<a href="#home" class="move-top text-center">
-					<span class="fa fa-level-up" aria-hidden="true"></span>
-				</a>
-				<!-- //move top icon -->
-			</div>
-		</div>
-	</div>
-	<!-- //copyright bottom -->
+    <div class="container">
+        <h2>Welcome!</h2>
+        <p>Please enter your name below:</p>
+
+        <input type="text" id="name" placeholder="Enter your name here" />
+        <button onclick="sendRequest()">Submit</button>
+
+        <div id="response"></div> <!-- Response display area -->
+        <div class="loading" id="loading">Loading...</div> <!-- Loading animation -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Group 5. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function sendRequest() {
+            var name = document.getElementById("name").value.trim();
+            var responseDiv = document.getElementById("response");
+            var loadingDiv = document.getElementById("loading");
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+            if (name.length < 3) {
+                alert("Name must be at least 3 characters long.");
+                return;
+            }
+            if (!/^[a-zA-Z\s]+$/.test(name)) {
+                alert("Name can only contain letters and spaces.");
+                return;
+            }
+            name = name.replace(/\s+/g, ' ').trim();
+
+            loadingDiv.style.display = "block";
+            responseDiv.style.display = "none";  // Hide the response area
+
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    loadingDiv.style.display = "none";
+                    responseDiv.innerHTML = this.responseText;
+                    responseDiv.style.display = "block"; // Show the response area
+                }
+            };
+            xhttp.open("GET", "process.php?name=" + encodeURIComponent(name), true);
+
+            xhttp.send();
+        }
+    </script>
 
 </body>
 
 </html>
+
+process.php
+<?php
+header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
+header('Content-Security-Policy: upgrade-insecure-requests');
+header('X-Frame-Options: DENY'); 
+header('X-Content-Type-Options: nosniff'); 
+header('X-XSS-Protection: 1; mode=block'); 
+
+date_default_timezone_set('Asia/Manila');
+
+echo "Current Date and Time in the Philippines: <br><strong>" . date("M. d, Y | h:i A") . "</strong>";
+
+function validate_name($name) {
+    $name = htmlspecialchars(trim($name), ENT_QUOTES, 'UTF-8');
+    
+    if (strlen($name) < 3) {
+        return false;
+    }
+    
+    if (!preg_match("/^[a-zA-Z\s]+$/", $name)) {
+        return false;
+    }
+
+    $name = preg_replace('/\s+/', ' ', $name);
+
+    return $name;
+}
+
+if (isset($_GET['name']) && !empty($_GET['name'])) {
+    $name = validate_name($_GET['name']);
+
+    if ($name === false) {
+        echo "<p style='color: red;'>Invalid name. Please ensure it contains only letters and is at least 3 characters long.</p>";
+        exit();
+    }
+
+    $currentHour = date("H");
+    $greeting = "Hello";
+
+    if ($currentHour < 12) {
+        $greeting = "Good morning";
+    } elseif ($currentHour < 18) {
+        $greeting = "Good afternoon";
+    } else {
+        $greeting = "Good evening";
+    }
+
+    echo "<h3>$greeting, $name!</h3>";
+    echo "<p>Welcome and have a great day!</p>";
+    echo "<p>The current server time is: <strong>" . date("h:i A") . "</strong></p>";
+
+} else {
+    echo "<p style='color: red;'>No name was provided. Please enter your name and try again.</p>";
+}
+?>
