@@ -1,11 +1,18 @@
+index.php
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 5</title>
+
     <style>
         body {
+            background-image: url('img/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no repeat;
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             margin: 0;
@@ -59,7 +66,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             background-color: #e9ecef;
-            display: none; /* Hidden by default */
+            display: none;
         }
 
         .loading {
@@ -68,11 +75,12 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h2>Welcome!</h2>
         <p>Please enter your name below:</p>
-        
+
         <input type="text" id="name" placeholder="Enter your name here" />
         <button onclick="sendRequest()">Submit</button>
         
@@ -86,38 +94,35 @@
             var responseDiv = document.getElementById("response");
             var loadingDiv = document.getElementById("loading");
 
-            if (name === "") {
-                alert("Please enter your name.");
-                return;
-            }
 
-            // Display the loading message while the request is processed
+            name = name.replace(/\s+/g, ' ').trim();
+
             loadingDiv.style.display = "block";
             responseDiv.style.display = "none";  // Hide the response area
 
-            // Create an XMLHttpRequest object
             var xhttp = new XMLHttpRequest();
 
-            // Define the callback function that will be executed when the request is successful
-            xhttp.onreadystatechange = function() {
+            xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    // Hide loading and show response
+
                     loadingDiv.style.display = "none";
                     responseDiv.innerHTML = this.responseText;
                     responseDiv.style.display = "block"; // Show the response area
                 }
             };
 
-            // Open the GET request and include the name as a URL parameter
             xhttp.open("GET", "process.php?name=" + encodeURIComponent(name), true);
 
-            // Send the request
+            xhttp.setRequestHeader("X-Custom-Header", "CustomValue");
+            xhttp.setRequestHeader("Content-Type", "application/json");
+
             xhttp.send();
         }
     </script>
-</body>
-</html>
 
+</body>
+
+</html>
 
 process.php
 <?php
